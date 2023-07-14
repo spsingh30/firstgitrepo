@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container{
+    border: solid 1px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border-radius: 10px;
+    background-color: #fff;
+    align-items: center;
+    gap: 10px;
+  }
+  .box{
+    border: solid 1px rgb(167, 161, 161);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 340px;
+    height: 60px;
+    margin-bottom: 20px;
+
+    position: relative;
+  }
+  input{
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 4px;
+    width: 250px;
+    border:none;
+    outline: none;
+  }
+  label{
+    color:  grey;
+    position: absolute;
+    top: 30px;
+  }
+  button{
+    color: #f6f6fb;
+    background-color: rgb(31, 138, 246);
+    width: 340px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+  }
+
+   .box input:focus ~ label,
+   .box input:valid ~ label{
+    top: 0px;
+    font-size: 12px;
+    color: rgb(71, 71, 242);
+
+  }
+  .box input:focus,
+  .box input:valid{
+    border-color: #1e87f0;
+    font-size: 16px;
+  }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <h1>Login</h1>
+        <form  >
+          <div class="box">
+            <input type="text" name="name" autocomplete="on" required="" id="name">
+            <label for="name"> user name</label>
+          </div>
+          <div class="box">
+            <input type="password" name="password" autocomplete="on" required="" id="key">
+            <label for="key">Password</label>
+          </div>
+          <button type="submit">submit</button>
+        </form>
+    </section>
+</body>
+</html>
