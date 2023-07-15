@@ -25,14 +25,9 @@
     gap: 10px;
   }
   .box{
-    border: solid 1px rgb(167, 161, 161);
-    border-top: none;
-    border-left: none;
-    border-right: none;
     width: 340px;
     height: 60px;
     margin-bottom: 20px;
-
     position: relative;
   }
   input{
@@ -40,8 +35,11 @@
     position: absolute;
     top: 20px;
     left: 4px;
-    width: 250px;
-    border:none;
+    width: 290px;
+    border: solid 1px rgb(167, 161, 161);
+    border-top: none;
+    border-left: none;
+    border-right: none;
     outline: none;
   }
   label{
@@ -58,6 +56,11 @@
     border-radius: 5px;
     border: none;
     padding: 10px;
+    transition: all ease-in-out 0.3s;
+  }
+  button:hover{
+    background-color: #0f4ed6;
+    cursor: pointer;
   }
 
    .box input:focus ~ label,
@@ -67,20 +70,19 @@
     color: rgb(71, 71, 242);
 
   }
-  .box input:focus,
-  .box input:valid{
-    border-color: #1e87f0;
-    font-size: 16px;
+  .box input:focus{
+    border-bottom: solid 1px #0873de;
+    width: 300px;
   }
     </style>
 </head>
 <body>
     <section class="container">
         <h1>Login</h1>
-        <form  >
+        <form action="">
           <div class="box">
             <input type="text" name="name" autocomplete="on" required="" id="name">
-            <label for="name"> user name</label>
+            <label for="name"> User name</label>
           </div>
           <div class="box">
             <input type="password" name="password" autocomplete="on" required="" id="key">

@@ -4,11 +4,92 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>signuppage</title>
+    <style>
+        body{
+            background-color: black;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            background-color: #fff;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-entity{
+            position: relative;
+            height: 70px;
+        }
+        .form-entity input,select{
+            font-size: 19px;
+            position: absolute;
+            top: 30px;
+            left: 4px;
+            width: 350px;
+            border:solid 1px ;
+            border-radius: 4px;
+           
+        }
+        select{
+            width: 357px;
+        }
+        .form-entity label{
+            position: absolute;
+            left: 4px;
+            top: 0px;
+            font-size: 20px;
+        }
+         button{
+            width: 370px;
+            background-color: black;
+            color: #fff;
+            padding: 7px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            margin-top: 20px;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 32px;
+        }
+    </style>
 </head>
 <body>
     <section class="container">
-        
+        <h1>Sign up</h1>
+        <form action="">
+            <div class="form-entity">
+                <label for="name">Name</label>
+                <input type="text" id="name" required="">
+            </div>
+            <div class="form-entity">
+                <label for="batch">Batch</label>
+                <select name="batch" id="batch" required>
+                    <option value="2019">batch-2019</option>
+                    <option value="2020">batch-2020</option>
+                    <option value="2022">batch-2022</option>
+                    <option value="2023">batch-2023</option>
+                </select>
+            </div>
+            <div class="form-entity">
+                <label for="age">Age</label>
+                <input type="number"  name="number" id="age">
+            </div>
+            <div class="form-entity">
+                <label for="Email">Email</label>
+                <input type="email" name="email" id="Email">
+            </div>
+            <div class="form-entity">
+                <label for="key">Password</label>
+                <input type="password" id="key" name="password">
+            </div>
+            <button type="submit">sign up</button>
+        </form>
     </section>
 </body>
 </html>
